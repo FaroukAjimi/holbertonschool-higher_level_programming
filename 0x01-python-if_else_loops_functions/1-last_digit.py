@@ -5,7 +5,7 @@ l = int(repr(number)[-1])
 if number >= 0:
     l = number % 10
 else:
-    l = number % 10
+    l = number % -10
 if l > 5:
     print("Last digit of {:d} is {:d} and is greater than 5".format(number, l))
 elif l == 0:
