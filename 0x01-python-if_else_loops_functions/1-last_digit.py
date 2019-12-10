@@ -10,5 +10,5 @@ if l > 5:
     print("Last digit of {} is {} and is greater than 5".format(number, l))
 elif l == 0:
     print("Last digit of {} is {} and is 0".format(number, l))
-else:
+elif l < 6 and l != 0:
     print("Last digit of {} is {} and is less than 6".format(number, l))
