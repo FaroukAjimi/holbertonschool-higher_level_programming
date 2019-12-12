@@ -1,8 +1,0 @@
-#!/usr/bin/python3
-if __name__ == "__main__":
-    import variable_load_5
-    import sys
-    b = dir(variable_load_5)
-    for i in range(0, len(b)):
-        if b[i] == a:
-            print('{}'.format(a))
