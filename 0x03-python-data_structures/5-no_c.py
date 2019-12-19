@@ -4,5 +4,5 @@ def no_c(my_string):
     for i in my_string:
         if i == 'C' or i == 'c':
             i = ''
-        sp = sp + i
+        sp += i
     return (sp)
