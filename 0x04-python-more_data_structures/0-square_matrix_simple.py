@@ -1,7 +1,4 @@
 #!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
-    a = len(matrix)
-    b = [[row[i] for i in range(a)] for row in matrix]
-    for i in range(a):
-        b[i] = list(map(lambda x: x * x, matrix[i]))
+    b = list(map(lambda x: list(map(lambda y: y * y, x)), matrix))
     return (b)
