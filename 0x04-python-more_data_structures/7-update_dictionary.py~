@@ -1,0 +1,8 @@
+#!/usr/bin/python3
+def update_dictionary(a_dictionary, key, value):
+    a = {}
+    for i in a_dictionary:
+        a[i] = a_dictionary[i]
+    print(len(a))
+    return(a)
+    
