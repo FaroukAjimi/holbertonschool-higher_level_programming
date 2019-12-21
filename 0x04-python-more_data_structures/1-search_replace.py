@@ -2,6 +2,6 @@
 def search_replace(my_list, search, replace):
     a = len(my_list)
     b = [i for i in my_list]
-    for i in range(0, search):
-        b[search - 1] = replace
+    b.insert(search, replace)
+    b.remove(search)
     return(b)
