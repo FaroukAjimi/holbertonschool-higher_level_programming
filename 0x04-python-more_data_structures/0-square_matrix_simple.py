@@ -6,7 +6,7 @@ def square_matrix_simple(matrix=[]):
             b = [[row[i] for i in range(a)] for row in matrix]
             for i in range(a):
                 for y in range(a):
-                    b[i][y] = b[i][y] * b[i][y]
+                    b[i][y] = matrix[i][y] * matrix[i][y]
             return (b)
         else:
             return (0)
