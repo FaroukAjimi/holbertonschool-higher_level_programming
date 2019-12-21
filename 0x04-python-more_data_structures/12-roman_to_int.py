@@ -6,7 +6,7 @@ def roman_to_int(roman_string):
     a = 0
     s = list(roman_string)
     for i, y in r.items():
-        for k in s:
-            if i == k:
+        for b in s:
+            if i == b:
                 a = a + y
     return(a)
