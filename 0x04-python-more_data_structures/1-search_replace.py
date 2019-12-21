@@ -5,4 +5,3 @@ def search_replace(my_list, search, replace):
     for i in range(0, search):
         b[search - 1] = replace
     return(b)
-    
