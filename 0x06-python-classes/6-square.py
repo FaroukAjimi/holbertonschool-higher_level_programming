@@ -30,14 +30,14 @@ class Square:
         '''function position
         args
         value:'''
-        self.__position = value
         try:
-            isinstance(value[0])
-            isinstance(value[1])
+            isinstance(value[0], int)
+            isinstance(value[1], int)
             if(len(value) != 2) or (value[0] < 0) or (value[1] < 0):
                 raise TypeError
         except TypeError:
             print("position must be a tuple of 2 positive integers")
+        self.__position = value
 
     @property
     def size(self):
@@ -75,13 +75,20 @@ class Square:
         args
         None
         print'''
-        for x in range(self.__position[1]):
-            print()
-        for i in range(self.__size):
-            for z in range(self.__position[0]):
-                print(" ", end="")
-            for y in range(self.__size):
-                print('#', end="")
-            print()
-        if (self.__size == 0):
-            print()
+        try:
+            if (len(self.__position)) != 2:
+                raise TypeError
+            if (self.__position[0] < 0 or self.__position[1] < 0):
+                raise TypeError
+            for x in range(self.__position[1]):
+                print()
+            for i in range(self.__size):
+                for z in range(self.__position[0]):
+                    print(" ", end="")
+                for s in range(self.__size):
+                    print('#', end="")
+                print()
+            if (self.__size == 0):
+                print()
+        except TypeError:
+            print("position must be a tuple of 2 positive integers")
