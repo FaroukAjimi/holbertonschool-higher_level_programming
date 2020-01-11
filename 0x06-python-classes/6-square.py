@@ -10,9 +10,9 @@ class Square:
         ERR = 'position must be a tuple of 2 positive integers'
         if not(len(position) == 2):
             raise TypeError(ERR)
-        if not(isinstance(position[0],int)):
+        if not(isinstance(position[0], int)):
             raise TypeError(ERR)
-        if not(isinstance(position[1],int)):
+        if not(isinstance(position[1], int)):
             raise TypeError(ERR)
         if (position[0] < 0 or position[1] < 0):
             raise TypeError(ERR)
@@ -38,12 +38,12 @@ class Square:
         '''function position
         args
         value:'''
-        ERR= 'position must be a tuple of 2 positive integers'
-        if not(len(value)== 2):
+        ERR = 'position must be a tuple of 2 positive integers'
+        if not(len(value) == 2):
             raise TypeError(ERR)
-        if not(isinstance(value[0],int)):
+        if not(isinstance(value[0], int)):
             raise TypeError(ERR)
-        if not(isinstance(value[1],int)):
+        if not(isinstance(value[1], int)):
             raise TypeError(ERR)
         if (value[0] < 0 or value[1] < 0):
             raise TypeError(ERR)
