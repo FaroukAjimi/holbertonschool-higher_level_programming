@@ -80,6 +80,8 @@ class Square:
                 raise TypeError
             if (self.__position[0] < 0 or self.__position[1] < 0):
                 raise TypeError
+            for x in range(self.__position[1]):
+                print()
             for i in range(self.__size):
                 for z in range(self.__position[0]):
                     print(" ", end="")
