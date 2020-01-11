@@ -1,6 +1,11 @@
 #!/usr/bin/python3
 class Square:
+    '''Square functin level 2'''
     def __init__(self, size=0):
+        '''square fuction
+        Args:
+        size: 0
+        '''
         self.__size = size
         try:
             size += 1

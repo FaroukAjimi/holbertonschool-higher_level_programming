@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 class Square:
-    '''function square lvl 4'''
+    '''square funtion lvl 5'''
     def __init__(self, size=0):
-        '''function
+        '''funtion square
         args
-        size: 0'''
+        size:0'''
         self.__size = size
         try:
             size += 1
@@ -17,17 +17,17 @@ class Square:
 
     @property
     def size(self):
-        '''function size
+        '''fucntion size
         args
-        size:0
+        none
         return:size'''
         return(self.__size)
 
     @size.setter
     def size(self, value):
-        '''function size2
-        args
-        size:value'''
+        '''function size 2
+        args :
+        value: size'''
         try:
             isinstance(value, int)
             if(value < 0):
@@ -39,9 +39,21 @@ class Square:
         self.__size = value
 
     def area(self):
-        '''function area
+        '''funciton area
         args
-        none
-        return: a'''
+        None
+        return a'''
         a = self.__size * self.__size
         return(a)
+
+    def my_print(self):
+        '''function my_print
+        args
+        None
+        print'''
+        for i in range(self.__size):
+            for y in range(self.__size):
+                print('#', end="")
+            print()
+        if (self.__size == 0):
+            print()
