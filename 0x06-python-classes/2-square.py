@@ -8,7 +8,7 @@ class Square:
         '''
         self.__size = size
         try:
-            if(isinstance(size, int) == False):
+            if(not(isinstance(size, int))):
                 raise TypeError
             if (size < 0):
                 raise ValueError
