@@ -15,7 +15,7 @@ class Square:
         except ValueError:
             raise Exception('size must be >= 0')
 
-        def area(self):
+    def area(self):
             '''area function
             Args
             return: a'''
