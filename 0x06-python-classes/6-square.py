@@ -7,6 +7,8 @@ class Square:
         size: 0
         position 0,0'''
         ERR = 'position must be a tuple of 2 positive integers'
+        if not(isinstance(position, tuple)):
+            raise TypeError(ERR)
         if not(len(position) == 2):
             raise TypeError(ERR)
         if not(isinstance(position[0], int)):
@@ -36,6 +38,8 @@ class Square:
         args
         value:'''
         ERR = 'position must be a tuple of 2 positive integers'
+        if not(isinstance(value, tuple)):
+            raise TypeError(ERR)
         if not(len(value) == 2):
             raise TypeError(ERR)
         if not(isinstance(value[0], int)):
