@@ -48,7 +48,7 @@ class Square:
             raise TypeError(ERR)
         if (value[0] < 0 or value[1] < 0):
             raise TypeError(ERR)
-        self.__position == value
+        self.__position = value
 
     @property
     def size(self):
