@@ -2,6 +2,8 @@
 def pow(a, b):
     c = 1
     if b < 0:
+        if a < 0:
+            c = c * -1
         b = b * -1
         c = float(c)
         a = float(a)
