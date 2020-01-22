@@ -32,7 +32,7 @@ a must be an integer
 Traceback (most recent call last):
 ...
 OverflowError: cannot convert float infinity to integer
->>> add_integer(float(None))
+>>> add_integer(float('NaN'))
 Traceback (most recent call last):
 ...
-TypeError: float() argument must be a string or a number, not 'NoneType'
+ValueError: cannot convert float NaN to integer
