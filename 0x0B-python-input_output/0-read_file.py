@@ -3,7 +3,9 @@
 
 
 def read_file(filename=""):
-    """function readfile"""
+    """function read_file
+    args
+    filename"""
     with open(filename) as file:
         data = file.read()
         print (data, end='')
