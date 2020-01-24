@@ -6,8 +6,8 @@ Module that contains function
 
 def read_file(filename=""):
     """function read_file
-    Args:
-    filename
+       Args:
+           filename
     """
     with open(filename, "r") as f:
         data = f.read()
