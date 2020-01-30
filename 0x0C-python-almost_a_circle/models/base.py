@@ -35,13 +35,13 @@ class Base:
         args
         cls
         list_objs"""
-        if list_objs is None:
-            return []
-        l = []
         for i, y in enumerate(list_objs):
             list_objs[i] = cls.to_dictionary(y)
         with open(cls.__name__ + '.json', 'w', encoding='utf8') as file:
-            file.write(cls.to_json_string(list_objs))
+            if list_objs is None:
+                file.write('[]')
+            else:
+                file.write(cls.to_json_string(list_objs))
 
     @staticmethod
     def from_json_string(json_string):
