@@ -51,3 +51,14 @@ class Base:
         if json_string is None or json_string == []:
             return []
         return (json.loads(json_string))
+
+    @classmethod
+    def create(cls, **dictionary):
+        """create function"""
+        pass
+
+    @classmethod
+    def load_from_file(cls):
+        with open(cls.__name__+'.json', 'r') as file:
+            if file.readlines() is None:
+                return ([])
