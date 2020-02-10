@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include "lists.h"
 /**
- *is_palindrome - lis
+ *is_palindrome - funtion
  *@head: jkjkj
- *Return : 0
+ *Return: 0always negative
  */
 int is_palindrome(listint_t **head)
 {
@@ -13,13 +13,13 @@ int is_palindrome(listint_t **head)
 	listint_t *tail = *head;
 
 	if (*head == NULL)
-		return(1);
+		return (1);
 	while (tail->next != NULL)
 	{
 		tail = tail->next;
 		i++;
 	}
-	i = i+1;
+	i = i + 1;
 	tail = *head;
 	while (i > 0)
 	{
@@ -31,11 +31,11 @@ int is_palindrome(listint_t **head)
 		y = 0;
 		if ((*head)->n != tail->n)
 		{
-			return(0);
+			return (0);
 		}
 		*head = (*head)->next;
 		tail = (*head);
-		i = i-2;
+		i = i - 2;
 	}
-	return(1);
+	return (1);
 }
