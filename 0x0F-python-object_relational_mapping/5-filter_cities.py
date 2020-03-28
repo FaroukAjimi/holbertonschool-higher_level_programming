@@ -7,15 +7,14 @@ if __name__ == "__main__":
                          user=sys.argv[1],
                          passwd=sys.argv[2],
                          db=sys.argv[3])
+    city =sys.argv[4]
     cur = db.cursor()
-    try:
-        city = sys.argv[4]
-    except:
-        print('')
-        exit()
     cur.execute("SELECT * FROM states,cities ORDER BY states.id,cities.id ASC")
     i = 0
-    for row in cur.fetchall():
+    e = cur.fetchall()
+    if len(e) == 0:
+        print()
+    for row in e:
         if row[0] == row[3] and city == row[1] and i == 0:
             print("{}".format(row[4]), end='')
             i = i + 1
