@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#display all
+# display all
 if __name__ == "__main__":
     import MySQLdb
     import sys
