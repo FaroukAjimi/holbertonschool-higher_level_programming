@@ -14,4 +14,5 @@ if __name__ == "__main__":
     session = session(bind=engine)
     LOUI = State(name="Louisiana")
     session.add(LOUI)
-    session.commit(LOUI.id)
+    session.commit()
+    print(LOUI.id)
