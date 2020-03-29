@@ -18,4 +18,4 @@ if __name__ == "__main__":
         print("Not found")
     for ele in ses:
         print(ele.id)
-    
+        exit()
