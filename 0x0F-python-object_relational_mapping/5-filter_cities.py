@@ -7,7 +7,7 @@ if __name__ == "__main__":
                          user=sys.argv[1],
                          passwd=sys.argv[2],
                          db=sys.argv[3])
-    city = sys.argv[4]
+    city = ("%s" % sys.argv[4])
     cur = db.cursor()
     cur.execute("SELECT * FROM states,cities ORDER BY states.id,cities.id ASC")
     i = 0
