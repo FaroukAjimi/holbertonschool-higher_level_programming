@@ -13,7 +13,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     session = sessionmaker()
     session = session(bind=engine)
-    ses = session.query(State).filter(State.name.contains(sys.argv[4]))
+    ses = session.query(State).filter(State.name.like(sys.argv[4]))
     if ses.count() == 0:
         print("Not found")
     for ele in ses:
