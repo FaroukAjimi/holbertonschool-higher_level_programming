@@ -12,5 +12,6 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     session = sessionmaker()
     session = session(bind=engine)
-    ses = ses.update().where(ses.id==2).values(name="New Mexico")
+    for row in session.query(State).filter(State.name.contains('a')):
+        session.delete(row)
     session.commit()
