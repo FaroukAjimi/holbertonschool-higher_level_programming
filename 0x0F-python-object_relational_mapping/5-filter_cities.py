@@ -7,17 +7,24 @@ if __name__ == "__main__":
                          user=sys.argv[1],
                          passwd=sys.argv[2],
                          db=sys.argv[3])
-    city = ("%s" % sys.argv[4])
     cur = db.cursor()
-    cur.execute("SELECT * FROM states,cities ORDER BY states.id,cities.id ASC")
+    cur.execute('SELECT cities.name FROM cities\
+    INNER JOIN states\
+    ON cities.state_id=states.id\
+    WHERE states.name = %s\
+    ORDER BY cities.id ASC', (sys.argv[4],))
     i = 0
+    z = 1
     e = cur.fetchall()
     for row in e:
-        if row[0] == row[3] and city == row[1] and i == 0:
-            print("{}".format(row[4]), end='')
-            i = i + 1
+        if i == 0:
+            for y in range(len(e)):
+                i = i + 1
+        if z < i:
+            print(row[0],end=", ")
+            z = z + 1
             continue
-        if row[0] == row[3] and city == row[1] and i != 0:
-            print(" ,{}".format(row[4]), end='')
+        if z == i:
+            print(row[0],end="")
     print()
     db.close()
