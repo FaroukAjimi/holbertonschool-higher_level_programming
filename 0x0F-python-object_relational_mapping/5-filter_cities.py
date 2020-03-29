@@ -21,10 +21,10 @@ if __name__ == "__main__":
             for y in range(len(e)):
                 i = i + 1
         if z < i:
-            print(row[0],end=", ")
+            print(row[0], end=", ")
             z = z + 1
             continue
         if z == i:
-            print(row[0],end="")
+            print(row[0], end="")
     print()
     db.close()
