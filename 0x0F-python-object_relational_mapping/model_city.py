@@ -8,7 +8,7 @@ from model_state import State
 Base = declarative_base()
 
 
-class State(Base):
+class City(Base):
     __tablename__ = "cities"
     id = Column(Integer, primary_key=True, unique=True,
                 nullable=False)
