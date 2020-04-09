@@ -1,3 +1,3 @@
 #!/bin/bash
 # DIsPLAY RESPONSE OF THE BODY
-curl -L $1 -X GET
+curl -s -L $1 -X GET

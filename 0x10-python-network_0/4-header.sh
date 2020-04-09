@@ -1,3 +1,3 @@
 #!/bin/bash
 # HEADER VALUE
-curl --header "X-HolbertonSchool-User-Id: 98"
+curl -s '$1' --header "X-HolbertonSchool-User-Id: 98"
