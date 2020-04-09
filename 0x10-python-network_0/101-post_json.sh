@@ -1,3 +1,3 @@
 #!/bin/bash
-# STATUS CODE
-curl -o /dev/null -s -w "%{http_code}\n" "$1"
+# JSON file
+curl -X POST -H "Content-Type: application/json" -d @"$2" "$1"
