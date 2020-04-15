@@ -8,6 +8,6 @@ if __name__ == "__main__":
     with urllib.request.urlopen(rq) as rs:
         d = rs.read()
     print("Body reponse:")
-    print("    - type: {}".format(type(d)))
-    print("    - content: {}".format(d))
-    print("    - utf8 content: {}".format(d.decode("utf-8")))
+    print("\t- type: {}".format(type(d)))
+    print("\t- content: {}".format(d))
+    print("\t- utf8 content: {}".format(d.decode("utf-8")))
