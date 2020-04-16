@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-# this dispays id and name
+"""
+post request
+to display name and id
+"""
 if __name__ == "__main__":
     import requests
     import sys
