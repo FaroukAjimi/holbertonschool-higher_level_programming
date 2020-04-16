@@ -13,9 +13,9 @@ if __name__ == "__main__":
                           data={'q': sys.argv[1]})
     try:
         r = r.json()
+        if not bool(r):
+            print("No result")
+        else:
+            print ('[{}] {}'.format(r['id'], r['name']))
     except ValueError:
         print("Not a valid JSON")
-    if not bool(r):
-        print("No result")
-    else:
-        print ('[{}] {}'.format(r['id'], r['name']))
