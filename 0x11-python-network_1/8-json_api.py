@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# [id] name
 if __name__ == "__main__":
     import requests
     import sys
@@ -9,9 +10,9 @@ if __name__ == "__main__":
                           data={'q': sys.argv[1]})
     try:
         r = r.json()
+        if not r:
+            print("No result")
+            exit()
+        print ('[{}] {}'.format(r['id'], r['name']))
     except:
         print("Not a valid JSON")
-    if not r:
-        print("No result")
-        exit()
-    print ('[{}] {}'.format(r['id'], r['name']))
