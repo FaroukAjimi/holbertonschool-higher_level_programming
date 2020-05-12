@@ -10,7 +10,10 @@ module.exports = class Square extends square {
   charPrint (c) {
     if (c === undefined) { c = 'X'; }
     for (let i = 0; i < this.size; i++) {
-      console.log(c.repeat(this.size));
+      for (let j = 0; j < this.size; j++) {
+        process.stdout.write(c);
+      }
+      process.stdout.write('\n');
     }
   }
 };
